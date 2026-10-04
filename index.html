@@ -97,9 +97,14 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mu);font-size
 // >>> PUT YOUR ELDORADO OFFER LINK HERE <<<
 const ELDORADO_URL = "https://www.eldorado.gg/fc-players/oi/6273ea0e-eed5-402b-3f1e-08df1fac2469";
 
-document.querySelectorAll("[data-buy]").forEach(a => { a.href = ELDORADO_URL; });
+document.querySelectorAll("[data-buy]").forEach(a => { a.href = ELDORADO_URL;
+  a.addEventListener("click", () => {
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({path: "click-eldorado", title: "Eldorado button click", event: true});
+  });
+});
 const nav = document.querySelector("nav");
 document.getElementById("burger").addEventListener("click", () => nav.classList.toggle("open"));
 document.querySelectorAll("#links a[href^='#']").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
 </script>
+<script data-goatcounter="https://itsmerobi.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body></html>
