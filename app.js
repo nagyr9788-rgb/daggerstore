@@ -1,5 +1,5 @@
 // >>> PUT YOUR ELDORADO OFFER LINK HERE <<<
-const ELDORADO_URL = "https://www.eldorado.gg/";
+const ELDORADO_URL = "https://www.eldorado.gg/fc-players/oi/6273ea0e-eed5-402b-3f1e-08df1fac2469";
 
 document.querySelectorAll("[data-buy]").forEach(a => { a.href = ELDORADO_URL; });
 const nav = document.querySelector("nav");
